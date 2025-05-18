@@ -1,6 +1,16 @@
 import { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
-import { MapContainer, TileLayer, Marker, Popup  } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+
+const customIcon = new L.Icon({
+  iconUrl: '/pino-de-localizacao.png',
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32],
+});
+
 import 'leaflet/dist/leaflet.css';
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
@@ -99,6 +109,7 @@ const { data: lojasData, error: erroLojas } = await supabase
           />
           {lojas.map((loja) => (
             <Marker key={loja.id} position={[loja.latitude, loja.longitude]}>
+              icon={customIcon}
               <Popup>
                 {loja.nome}
               </Popup>
