@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+delete L.Icon.Default.prototype._getIconUrl;
 import 'leaflet/dist/leaflet.css';
 
 const customIcon = new L.Icon({
