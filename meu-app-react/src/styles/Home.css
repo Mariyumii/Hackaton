@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Container geral */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header fixo no topo */
+.home-header {
+  background-color: #1F6764;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.home-header label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.home-header input,
+.home-header select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.home-header input::placeholder,
+.home-header select {
+  color: #555;
+}
+
+.filters-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* Mapa responsivo */
+.map-wrapper {
+  margin: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+}
+
+/* Lista de lojas */
+.lojas-list {
+  background-color: #1F6764;
+  color: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  min-height: 310px;
+}
+
+.lojas-list h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.lojas-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lojas-list li {
+  background-color: white;
+  color: #1F6764;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Footer navigation */
+.footer-nav {
+  background-color: #EDB552;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  margin-top: auto;
+  border-top: 1px solid #ccc;
+}
+
+.footer-nav a {
+    
+  color: #1F6764;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.form-busca {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+

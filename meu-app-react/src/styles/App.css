@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
