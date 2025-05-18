@@ -66,13 +66,16 @@ const { data: lojasData, error: erroLojas } = await supabase
 
         <form onSubmit={buscarLojasPorProduto} className="form-busca">
           <label htmlFor="busca-input">Item a buscar</label>
-          <input
-            id="busca-input"
-            type="text"
-            placeholder="O que está buscando?"
-            value={busca}
-            onChange={(e) => setBusca(e.target.value)}
-          />
+          <div className="input-wrapper">
+            <input
+              id="busca-input"
+              type="text"
+              placeholder="O que está buscando?"
+              value={busca}
+              onChange={(e) => setBusca(e.target.value)}
+            />
+            <button type="submit" className="botao-busca-inline">🔍</button>
+          </div>
 
           <label htmlFor="cidade-select">Cidade</label>
           <select
@@ -82,9 +85,8 @@ const { data: lojasData, error: erroLojas } = await supabase
           >
             <option value="Londrina">Londrina</option>
           </select>
-          <button type="submit" style={{ display: 'none' }}>Buscar</button>
-
         </form>
+
         
       </header>
 
@@ -126,6 +128,7 @@ const { data: lojasData, error: erroLojas } = await supabase
         <Link to="/">Home</Link>
         <Link to="/about">Perfil</Link>
       </nav>
+      
     </div>
   );
 }
