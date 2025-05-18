@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Home RECEBA</h1>
       <ul>
         {dados.map((item, index) => (
           <li key={index}>{JSON.stringify(item)}</li>
