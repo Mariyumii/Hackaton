@@ -1,6 +1,19 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: #f2d6a4;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 414px; /* largura máxima do app */
+  background-color: white;
 }
 
 .container {

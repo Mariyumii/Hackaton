@@ -63,6 +63,7 @@ const { data: lojasData, error: erroLojas } = await supabase
   return (
     <div className="home-container">
       <header className="home-header">
+
         <form onSubmit={buscarLojasPorProduto} className="form-busca">
           <label htmlFor="busca-input">Item a buscar</label>
           <input
@@ -81,12 +82,15 @@ const { data: lojasData, error: erroLojas } = await supabase
           >
             <option value="Londrina">Londrina</option>
           </select>
+          <button type="submit" style={{ display: 'none' }}>Buscar</button>
+
         </form>
+        
       </header>
 
 
       <div className="map-wrapper">
-        <MapContainer center={[-23.3045, -51.1696]} zoom={13} scrollWheelZoom={false} style={{ height: '300px', width: '100%' }}>
+        <MapContainer center={[-23.3045, -51.1696]} zoom={13} scrollWheelZoom={true}  zoomControl={false} style={{ height: '300px', width: '100%' }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution="&copy; OpenStreetMap contributors"
